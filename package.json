@@ -15,11 +15,13 @@
     "lint:hbs": "ember-template-lint .",
     "lint:js": "eslint .",
     "start": "ember serve",
-    "test": "ember test"
+    "test": "ember test",
+    "cy": "./node_modules/.bin/cypress open"
   },
   "devDependencies": {
     "@ember/optional-features": "^0.7.0",
     "broccoli-asset-rev": "^3.0.0",
+    "cypress": "^3.4.0",
     "ember-cli": "~3.11.0",
     "ember-cli-app-version": "^3.2.0",
     "ember-cli-babel": "^7.7.3",
