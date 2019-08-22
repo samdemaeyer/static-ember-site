@@ -1,0 +1,16 @@
+version: 3
+
+notifications:
+- when: pull_request.opened
+  # only need to send this to external-contributors
+  if: "author_association in ['FIRST_TIMER', 'FIRST_TIME_CONTRIBUTOR', 'CONTRIBUTOR']"
+  comment: >
+    Hey @{{ author }}, please make sure your tests pass and you have looked everything over. Then we will review.
+
+    Thanks for the PR!
+- when: pullapprove.approved
+  comment: "The review is completed. @{{ author }}, please merge this in when ready."
+
+reviewers:
+  users:
+  - samdemaeyer
